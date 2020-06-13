@@ -6,7 +6,7 @@ public class Attence {
     private int id;//id
     private String empname;//员工姓名
     private String dept;//部门
-    private Date chkdata;//登记日期
+    private Date chkdate;//登记日期
     private String status;//考勤类型
 
 
@@ -16,7 +16,7 @@ public class Attence {
                 "id=" + id +
                 ", empname='" + empname + '\'' +
                 ", dept='" + dept + '\'' +
-                ", chkdata=" + chkdata +
+                ", chkdate=" + chkdate +
                 ", status='" + status + '\'' +
                 '}';
     }
@@ -45,12 +45,12 @@ public class Attence {
         this.dept = dept;
     }
 
-    public Date getChkdata() {
-        return chkdata;
+    public Date getChkdate() {
+        return chkdate;
     }
 
-    public void setChkdata(Date chkdata) {
-        this.chkdata = chkdata;
+    public void setChkdate(Date chkdate) {
+        this.chkdate = chkdate;
     }
 
     public String getStatus() {

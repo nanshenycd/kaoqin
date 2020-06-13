@@ -6,19 +6,22 @@
 
 <mapper namespace="com.nanshenycd.kaoqin.mapper.AttenceMapper">
     <select id="list" resultType="Attence">
-    select * from  ATTENCE
-
+    select * from  attence order by id desc
   </select>
     <insert id="add" parameterType="Attence">
-        insert into ATTENCE (empname,dept,chkdata,status) values (#{empname},#{dept},#{chkdata},#{status})
+        insert into attence (empname,dept,chkdate,status) values (#{empname},#{dept},#{chkdate},#{status})
     </insert>
-    <delete id="delete" parameterType="int">
-        delete * from ATTENCE where id = #{id}
+    <delete id="delete" parameterType="Attence">
+        delete from attence where id = #{id}
     </delete>
     <update id="update" parameterType="Attence">
-        update ATTENCE set empname=#{empname},dept=#{dept},chkdata=#{chkdata},status=#{status} where id =#{id}
+        update attence set empname=#{empname},dept=#{dept},chkdate=#{chkdate},status=#{status} where id =#{id}
     </update>
-    <select id="get" resultType="Attence">
-        select * from ATTENCE where id =#{id}
+    <select id="get" resultType="Attence" parameterType="int">
+        select * from attence where id =#{id}
+    </select>
+
+    <select id="select" parameterType="Attence">
+        select * from attence where name =#{name}
     </select>
 </mapper>
